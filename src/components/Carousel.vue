@@ -56,6 +56,9 @@
           </div>
         </div>
       </div>
+      <div class="dot-container">
+        <div class="dot" v-for="item in data" :key="item" />
+      </div>
     </div>
   </div>
 </template>
@@ -323,6 +326,26 @@ a {
   display: none;
   @media (min-width: $screen-md) {
     display: block;
+  }
+}
+
+.dot-container {
+  position: absolute;
+  bottom: 10px;
+  width: 80%;
+  left: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
+  .dot {
+    height: .5rem;
+    width: .5rem;
+    background-color: white;
+    border-radius: 50%;
+    z-index: 5;
+    margin: 0 1rem 0 1rem;
   }
 }
 </style>
